@@ -1,0 +1,4 @@
+Desafio:
+
+Calcular a média aritimética de 2 ou mais numeros.
+Formula: A + B + C / 3

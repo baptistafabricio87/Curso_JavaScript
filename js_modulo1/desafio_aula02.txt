@@ -1,0 +1,4 @@
+Desafio: 
+
+Crie um codigo de uma possível calculardora que receberá sempre
+valores como texto e deve retornar os valores somados.

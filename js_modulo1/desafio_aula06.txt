@@ -1,0 +1,8 @@
+Desafio: 06
+
+Utilizando o "for" crie um programa que calcule a 
+função log "Math.log()" para cad valor do contador
+
+Este programa deve solicitar os valores inciais, 
+finais e de incremento.
+E também escrever na tela o resultado.

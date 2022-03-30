@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function soma(x, y) {
+        //     return x + y;
+        // }
+        // console.log(soma(10, 30));
+
+
+
+    // FUNÇÃO DE POTENCIA SEM RECURSÃO - COM FOR
+        // function potencia(base, expoente) {
+        //     var result = 1;
+        //     for(var x = 0; x < expoente; x++){
+        //         result *= base;
+        //     }
+        //     return result;
+        // }
+        // console.log(potencia(2,3));
+
+    // FUNÇÃO COM RECURSÃO - SEM FOR
+        function potencia (base, expoente){
+            console.log("Base:" + base);
+            console.log("Expoente:" + expoente);
+            if(expoente == 0){
+                return 1;
+            }
+            return base * potencia(base, expoente -1);
+        }
+        console.log(potencia(2, 3));
+    </script>
+</body>
+</html>

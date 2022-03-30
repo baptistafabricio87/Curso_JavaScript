@@ -1,0 +1,7 @@
+Desafio: 07
+
+Como parte da nossa viagem matemática implemente a função fatorial
+(SEM UTILIZAR BIBLIOTECE MATH) utilizando recursão.
+
+Lembrando que o fatorial se calcula dessa forma: 
+https://pt.wikipedia.org./wifi/Fatorial
