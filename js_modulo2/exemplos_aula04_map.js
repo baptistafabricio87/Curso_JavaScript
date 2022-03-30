@@ -24,11 +24,13 @@ var convidados = [
     {nome: "miguel", idade: 3, vip: true},
     {nome: "tatiana", idade: 32, vip: true}
 ];
-
+// var nomesOK = function(item){
+//     return Object.assign(item, 
+//         {nome: item.nome.toLocaleUpperCase()});
+// };
+// var convidadoNormalizado = convidados.map(nomesOK);
 var convidadoNormalizado = convidados.map(function(item){
     return Object.assign(item, 
         {nome: item.nome.toLocaleUpperCase()});
 });
-
 console.log(convidadoNormalizado);
-
