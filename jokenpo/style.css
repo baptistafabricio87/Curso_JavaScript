@@ -1,0 +1,100 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    /* cursor: default; */
+}
+
+#principal h1{
+    text-align: center;
+    margin: 2rem;
+    font-weight: 600;
+}
+
+#placar {
+    display: flex;
+    align-items: center;
+    margin: .3rem .3rem 1.5rem .3rem;
+}
+
+#jogador, #computador {
+    position: relative;
+    flex-grow: 1;
+    color: #ecf0f1;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+#jogador {
+    background-color: #0984e3;
+}
+
+#jogador:hover {
+    background-color: #74b9ff;
+}
+
+#computador {
+    background-color: #00cec9;
+}
+
+#computador:hover {
+    background-color: #81ecec;
+}
+
+#jogador-nome, #computador-nome {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+#computador-nome {
+    text-align: right;
+}
+
+#jogador-pontos, #computador-pontos {
+    position: absolute;
+    top: 8px;
+    font-size: 2rem;
+}
+
+#jogador-pontos {
+    right: 20px;
+}
+
+#jogador-escolha {
+    list-style: none;
+    text-align: center;
+    margin: 2rem 0 0 0;
+    padding: 0;
+}
+
+#jogador-escolha li {
+    display: inline;
+    padding: 0 10px;
+}
+
+#jogador-escolha a {
+    opacity: .3;
+}
+
+#jogador-escolha a:hover {
+    opacity: 100;
+    cursor: pointer;
+}
+
+#jogador-escolha img {
+    max-width: 60px;
+}
+
+#versus {
+    font-size: 2rem;
+    padding: 0 20px;
+}
+
+#mensagem {
+    background-color: #b8b3b3;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 .3rem 0 .3rem;
+    padding: 2px 0 2px 0;
+}
