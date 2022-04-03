@@ -1,7 +1,6 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
-    /* cursor: default; */
 }
 
 #principal h1{
@@ -28,16 +27,8 @@
     background-color: #0984e3;
 }
 
-#jogador:hover {
-    background-color: #74b9ff;
-}
-
 #computador {
     background-color: #00cec9;
-}
-
-#computador:hover {
-    background-color: #81ecec;
 }
 
 #jogador-nome, #computador-nome {
@@ -76,8 +67,10 @@
     opacity: .3;
 }
 
-#jogador-escolha a:hover, #computador-escolha a:hover {
-    opacity: 100;
+#jogador-escolha a:hover, 
+#jogador-escolha a.selecionado, 
+#computador-escolha a.selecionado {
+    opacity: 1;
     cursor: pointer;
 }
 
@@ -95,7 +88,6 @@
     border-radius: 5px;
     font-size: 1.5rem;
     text-align: center;
-    font-weight: bold;
-    margin: 0 .3rem 0 .3rem;
-    padding: 2px 0 2px 0;
+    margin: 0 .3rem;
+    padding: 1rem 0;
 }

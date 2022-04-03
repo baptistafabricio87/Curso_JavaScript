@@ -1,20 +1,32 @@
-var player, playerChoice, computerChoice;
-
-// DEFINE NOME DO JOGADOR
-function definePlayer(player) {
-    player = prompt("Qual é o nome do jogador ? ");
-    return player;
-}
-
-function message(player) {
+var playerName, playerChoice, computerChoice;
+var playerScore = 0, computerScore = 0;
+// DEFINE NOME DO JOGADOR E BOAS VINDAS
+function definePlayer(playerName) {
+    playerName = prompt("Qual é o nome do jogador ? ");
     document.getElementById('mensagem').innerHTML = "Bem-vindo "
-    + player + ", vamos começar? Pedra, Papel ou Tesoura?";
-    document.getElementById('jogador-nome').innerHTML = player;
+        + playerName + ", vamos começar? Pedra, Papel ou Tesoura?";
+    document.getElementById('jogador-nome').innerHTML = playerName;
+    return playerName;
 }
 
-// Sorteia numero para jogada do computador.
+// EXIBE GANHADOR
+function displayWinner(winner) {
+    document.getElementById('mensagem').innerHTML = winner;
+    document.getElementById('jogador-pontos').innerHTML = playerScore;
+    document.getElementById('computador-pontos').innerHTML = computerScore;
+}
+
+// ESCOLHA DO COMPUTADOR
 function drawNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function selectPlayer(witchPlayer, choice) {
+    document.getElementById(witchPlayer + '-escolha-' + choice).classList.add('selecionado');
+}
+
+function deselectPlayer(witchPlayer, choice) {
+    document.getElementById(witchPlayer + '-escolha-' + choice).classList.remove('selecionado');
 }
 
 // CALCULA GANHADOR 
@@ -25,7 +37,7 @@ function calculateChoice(playerChoice, computerChoice) {
     } else if (playerChoice == 2 && computerChoice == 2) {
         return 0;
     } else if (playerChoice == 3 && computerChoice == 3) {
-        return 0;  
+        return 0;
         // 1 = JOGADOR
     } else if (playerChoice == 1 && computerChoice == 3) {
         return 1;
@@ -43,22 +55,34 @@ function calculateChoice(playerChoice, computerChoice) {
     }
 }
 
+// FUNCAO PRINCIPAL
 function play(choice) {
-    // Escolha do jogador
+    // ESCOLHA DO JOGADOR
     var playerChoice = choice;
-    
-    // Escolha do computador
+    selectPlayer('jogador', playerChoice);
+    // ESCOLHA DO COMPUTADOR
     var computerChoice = drawNumber(1, 3);
-    
+    selectPlayer('computador', computerChoice);
+    // DEFINE VENCEDOR
     var winner = calculateChoice(playerChoice, computerChoice);
-
-    return winner
+    if (winner == 0) {
+        displayWinner('Empate');
+    } else if (winner == 1) {
+        playerScore++;
+        displayWinner('Ponto para o ' + playerName);
+    } else if (winner == 2) {
+        computerScore++;
+        displayWinner('Ponto para o Computador');
+    }
+    setTimeout(function () {
+        deselectPlayer('jogador', playerChoice);
+        deselectPlayer('computador', computerChoice);
+        displayWinner('Boa ' + playerName + '. Escolha outra opção acima...')
+    }, 1500);
 }
 
-var player = definePlayer();
-alert("Bem-vindo ao Jokenpo " + player);
-message(player);
+var playerName = definePlayer();
+alert("Bem-vindo ao Jokenpo " + playerName);
 document.getElementById('jogador-escolha-1').onclick = function () { play(1); }
 document.getElementById('jogador-escolha-2').onclick = function () { play(2); }
 document.getElementById('jogador-escolha-3').onclick = function () { play(3); }
-
