@@ -60,28 +60,28 @@
     right: 20px;
 }
 
-#jogador-escolha {
+#jogador-escolha, #computador-escolha {
     list-style: none;
     text-align: center;
     margin: 2rem 0 0 0;
     padding: 0;
 }
 
-#jogador-escolha li {
+#jogador-escolha li, #computador-escolha li {
     display: inline;
     padding: 0 10px;
 }
 
-#jogador-escolha a {
+#jogador-escolha a, #computador-escolha a {
     opacity: .3;
 }
 
-#jogador-escolha a:hover {
+#jogador-escolha a:hover, #computador-escolha a:hover {
     opacity: 100;
     cursor: pointer;
 }
 
-#jogador-escolha img {
+#jogador-escolha img, #computador-escolha img {
     max-width: 60px;
 }
 
@@ -93,8 +93,9 @@
 #mensagem {
     background-color: #b8b3b3;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 1.5rem;
     text-align: center;
+    font-weight: bold;
     margin: 0 .3rem 0 .3rem;
     padding: 2px 0 2px 0;
 }
