@@ -21,3 +21,4 @@ var somatoria = valores.reduce(function(total, item, indice) {
 console.log(somatoria);
 
 // -------------------------
+
