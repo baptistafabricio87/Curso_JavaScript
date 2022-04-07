@@ -3,7 +3,12 @@
     font-weight: 400;
 }
 
+body {
+    background-color: #dee0e6;
+}
+
 #principal h1{
+    color: #134e6f;
     text-align: center;
     margin: 2rem;
     font-weight: 600;
@@ -24,11 +29,11 @@
 }
 
 #jogador {
-    background-color: #0984e3;
+    background-color: #ff6150;
 }
 
 #computador {
-    background-color: #00cec9;
+    background-color: #1ac0c6;
 }
 
 #jogador-nome, #computador-nome {
@@ -84,7 +89,7 @@
 }
 
 #mensagem {
-    background-color: #b8b3b3;
+    background-color: #ffa822;
     border-radius: 5px;
     font-size: 1.5rem;
     text-align: center;

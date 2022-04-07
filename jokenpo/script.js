@@ -1,5 +1,6 @@
 var playerName, playerChoice, computerChoice;
 var playerScore = 0, computerScore = 0;
+
 // DEFINE NOME DO JOGADOR E BOAS VINDAS
 function definePlayer(playerName) {
     playerName = prompt("Qual é o nome do jogador ? ");
@@ -21,10 +22,12 @@ function drawNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+// MARCA OPÇAO DOS JOGADORES
 function selectPlayer(witchPlayer, choice) {
     document.getElementById(witchPlayer + '-escolha-' + choice).classList.add('selecionado');
 }
 
+// DESMARCA OPÇÕES DOS JOGADORES
 function deselectPlayer(witchPlayer, choice) {
     document.getElementById(witchPlayer + '-escolha-' + choice).classList.remove('selecionado');
 }
@@ -77,12 +80,12 @@ function play(choice) {
     setTimeout(function () {
         deselectPlayer('jogador', playerChoice);
         deselectPlayer('computador', computerChoice);
-        displayWinner('Boa ' + playerName + '. Escolha outra opção acima...')
+        displayWinner('Boa ' + playerName + '. Escolha outra opção acima...');
     }, 1500);
 }
 
 var playerName = definePlayer();
-alert("Bem-vindo ao Jokenpo " + playerName);
+// alert("Bem-vindo ao Jokenpo " + playerName);
 document.getElementById('jogador-escolha-1').onclick = function () { play(1); }
 document.getElementById('jogador-escolha-2').onclick = function () { play(2); }
 document.getElementById('jogador-escolha-3').onclick = function () { play(3); }
