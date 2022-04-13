@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+
+<body>
+    <div id="app">
+
+    </div>
+    <script type="text/javascript">
+        var ghPromises = function () {
+            return new Promise(function (resolve, reject) {
+                var xhr = new XMLHttpRequest();
+
+                xhr.open("GET", "https://api.github.com/users/baptistafabricio87");
+                xhr.send(null);
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            console.log(JSON.parse(xhr.responseText));
+                        } else {
+                            console.log("Erro no servidor");
+                        }
+                    }
+                }
+
+            })
+        };
+
+        ghPromises()
+            .then(function (resposta) {
+                console.log(resposta);
+            })
+            .catch(function (erro) {
+                console.log(erro);
+            });
+
+
+
+
+
+    </script>
+</body>
+
+</html>
