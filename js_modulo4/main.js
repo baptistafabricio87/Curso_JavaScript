@@ -1,1 +1,3 @@
-alert("Teste");
+class Teste {
+ 
+}
